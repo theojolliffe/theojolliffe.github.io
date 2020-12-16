@@ -1,6 +1,214 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <style>
+      body {
+          margin: 0px;
+      }
+      .storysection {
+        position: relative;
+        z-index: 10;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        background-image: none !important;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        min-height: 100vh;
+      }
+      .bg1 {
+        background-color: #d2dfea;
+      }
+      .bg2 {
+        background-color: #fff;
+      }
+      .bg3 {
+        background-color: #003c57;
+        padding: 5%;
+      }
+      .bg4 {
+        background-color: #f0f0f0;
+      }
+      .bg5 {
+        background-color: #216095
+      }
+      .bg6 {
+        background-color: #008080
+      }
+      h3 {
+        font-size: 100%;
+        margin: 0;
+      }
+      h4 {
+        font-size: 80%;
+        font-weight: 400;
+        margin: 0;
+      }
+      .row {
+          margin: auto;
+          width: 70%;
+          height: 150px;
+          margin-top: 40px;
+      }
+      .head {
+        font-family: "Open Sans";
+        color: #003C57;
+        font-size: 42px;
+        float: left;
+      }
+      .list {
+        font-family: "Open Sans";
+        color: #fff;
+        font-size: 30px;
+        float: left;
+      }
+      .entertext {
+        float: left;
+        margin-left: 0px;
+        margin-top: 40px;
+        font-size: 24px;
+        font-family: "Open Sans";
+        font-weight: 600;
+        color: #003c57;
+      }
+      li#mainitem {
+          font-weight: 700;
+          margin-top: 20px;
+      }
+      li#subitem {
+          font-weight: 300;
+          font-size: 26px;
+      }
+      .persona {
+          position: relative;
+          margin-left: 55%;
+          margin-right: 20%;
+          margin-top: 100px;
+          font-family: 'Open Sans';
+          color: #003C57;
+          font-weight: 700;
+          font-size: 28px;
+          width: 40%;
+      }
+      .persona2 {
+          position: relative;
+          margin-left: 15%;
+          margin-right: 20%;
+          margin-top: 0px;
+          font-family: 'Open Sans';
+          color: #003C57;
+          font-weight: 700;
+          font-size: 34px;
+          width: 60%;
+      }
+      .persona3 {
+          position: relative;
+          margin-left: 0%;
+          margin-right: 20%;
+          margin-top: 0px;
+          font-family: 'Open Sans';
+          color: #003C57;
+          font-weight: 700;
+          font-size: 34px;
+          width: 60%;
+      }
+      .contents {
+          position: relative;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 100px;
+          font-family: 'Open Sans';
+          color: #003C57;
+          font-weight: 700;
+          font-size: 24px;
+          width: 60%;
+      }
+      #story > div:nth-child(5) > div > div.trendrow > div:nth-child(2) > div > div > a, #story > div:nth-child(6) > div > div:nth-child(2) > div > div > a, #story > div:nth-child(6) > div > div > div > a, #story > div.storysection.bg3 > div > div > a, #story > div.storysection.bg4 > div > div.trendrow > div.flourigh-trend-line > div > div > a, #story > div.storysection.bg4 > div > div.trendrow > div.flourigh-trend-donut > div > div > a {
+        opacity: 0 !important;
+      }
+      .flourish-embed.flourish-chart {
+          width: 90%;
+      }
+      .flourigh-trend-line {
+          float: left;
+          width: 48%;
+          padding: 10px;
+          margin-left: 100px;
+      }
+      .flourigh-trend-donut {
+          float: left;
+          width: 48%;
+          padding: 10px;
+      }
+      .trendrow {
+        display: flex;
+      }
+      .white {
+        color: white;
+      }
+
+      .grid-container {
+          width: 90%;
+          display: grid;
+          grid-gap: 0px;
+          grid-template-columns: 40% 60%;
+          padding-left: 10%;
+      }
+      .side-bar {
+        padding: 60px;
+        padding-top: 50px;
+        font-family: "Open Sans"
+      }
+      .inner {
+        padding: 10px;
+        padding-top: 50px;
+        font-family: "Open Sans"
+      }
+      h3#wherework {
+          color: white;
+          font-size: xxx-large;
+          margin-left: 20px;
+          margin-bottom: 20px
+      }
+      #story > div.storysection.bg6 > div > div.side-bar > div > div > svg > g:nth-child(3) {
+            font-family: 'Open Sans';
+            font-size: small;
+      }
+      #story > div.storysection.bg6 > div > div.side-bar > div.ledge > div > svg {
+        color: white;
+      }
+      .ledge {
+          margin-left: 20px;
+      }
+      #story > div:nth-child(2) > div > ol > li {
+        font-size: 64px;
+        padding: 5%;
+      }
+      p.crumb {
+          font-family: 'Open Sans';
+          color: white;
+      }
+      #story > div:nth-child(6) > div > div.row {
+         height: 50px !important;
+      }
+      #story > div:nth-child(9) > div > div > span > h4 {
+        font-size: 65%;
+        margin-top: 50px;
+      }
+      #story > div:nth-child(9) > div > div > span > h3 {
+        margin-top: 30px;
+      }
+      #story > div:nth-child(10) > div > div > span > ol > li {
+        font-size: 34px;
+        padding-top: 20px;
+      }
+      #story > div:nth-child(10) > div > div > span > h3 {
+        padding-top: 60px;
+      }
+
+    </style>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="onscopy.css">
@@ -50,22 +258,6 @@
 
       </div>
 
-      <div class="storysection bg2">
-        <p class="crumb" style="color: #003c57 !important; margin-left: 5%;">1. Choosing the data</p>
-
-        <div style="margin-left: 100px;position: absolute; z-index: 1; width: 40%; opacity: 1; height: 60%;   background-position: middle; background-size: 100%; margin-top: 60px; float: left; background-image:url(https://miro.medium.com/max/1400/1*1YZRmdvIa22har7Ca7KRbQ.jpeg)">
-        </div>
-        <div class="persona">
-          <h3 style="font-size: 150% !important">The Inquiring Citizen</h3>
-          <p>The ONS Digital Content team caters for inquiring citizens.</p>
-          <p>"They want simply worded, visually engaging summaries, charts and infographics."</p>
-          <p>They might use data to help make life decisions, for instance about work and investments.</p>
-
-        </div>
-
-
-      </div>
-
       <div class="storysection bg4">
         <p class="crumb" style="color: #003c57 !important; margin-left: 5%;">1. Choosing the data</p>
         <div>
@@ -76,8 +268,8 @@
             <div class="flourigh-trend-line">
               <div class="flourish-embed flourish-chart" data-src="visualisation/4646403"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
             </div>
-            <div class="flourigh-trend-donut">
-              <div class="flourish-embed flourish-chart flourigh-trend-donut" data-src="visualisation/4646968" data-width=80%><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <div style="width:50%; float: left;">
+              <div class="flourish-embed flourish-network" data-src="visualisation/4666470"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
             </div>
           </div>
         </div>
@@ -87,15 +279,14 @@
         <p class="crumb" style="margin-left: 5%;">1. Choosing the data</p>
         <div>
           <div class="row">
-            <span class="head" style="color: white !important;"><h3>Why users will find this data useful</h3></span>
+            <span class="head" style="color: white !important;"><h3>Why users will find data on job insecurity useful</h3></span>
           </div>
-            <div style="width:50%; float: left;">
-              <div class="flourish-embed flourish-network" data-src="visualisation/4666470"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-            </div>
-            <div class="persona">
+          <div style="margin-left: 20%;position: relative; z-index: 1; width: 10%; opacity: 1; height: 130px; background-repeat: no-repeat; margin-top: 70px; margin-bottom: 0px; background-position: middle; background-size: 100%; background-image:url(https://cdn2.iconfinder.com/data/icons/web-hosting-19/50/70-512.png)">
+          </div>
+            <div class="persona2">
               <ol style="color: white">
-                <li style="padding: 10px; padding-top:50px">Pandemic economists</li>
-                <li style="padding: 10px">New to the jobs market</li>
+                <li style="padding: 10px; padding-top:50px">Pandemic economics</li>
+                <li style="padding: 10px">Entering the job market</li>
                 <li style="padding: 10px">Key decision makers</li>
               </ol>
             </div>
@@ -114,16 +305,13 @@
 
               <div style="margin-left: 10%;position: relative; z-index: 1; width: 20%; opacity: 1; height: 130px; background-repeat: no-repeat; margin-top: 70px; margin-bottom: 70px; background-position: middle; background-size: 100%; background-image:url(https://cdn.pixabay.com/photo/2012/04/14/12/52/spanner-33816__480.png)">
               </div>
-
-              <p style="font-size:18px">
-                The data is published in the Annual Population Survey, which relies upon a 320,000 person sample to provide detail about economic activity at the local level.
-              </p>
-              <p style="font-size:18px">
-                The survey defines insecure jobs as temporary employment, agency work and the self-employed in certain jobs, such as service workers and machine operatives.
-              </p>
-              <p style="font-size:18px">
-                This dataset includes the proportion of workers in insecure jobs broken down by year, age group and geographical region.
-              </p>
+              <div class="persona3">
+                <ol style="color: white">
+                  <li style="padding: 10px; padding-top:20px">Annual Population Survey</li>
+                  <li style="padding: 10px">What is an insecure job?</li>
+                  <li style="padding: 10px">Breakdown of data</li>
+                </ol>
+              </div>
             </span>
           </div>
         </div>
@@ -144,8 +332,8 @@
               <h3>
                 Job insecurity on the rise amongst young workers in the UK
               </h3>
-              <h4>
-                The proportion of workers in insecure jobs between the age of 16 and 24 has risen from 11.4% in 2004 to 15.7% in 2019. Even prior to the coronavirus pandemic this trend has been impacting young people across the breadth of the country. Other age categories have seen less of a shift towards increased job insecurity; 65 to 74 year olds have moved from 12% to 11.6% in the same time frame and all other age groups have retained a level of job insecurity below 9%.
+              <h4 style="margin-top: 40px">
+                The proportion of workers in insecure jobs between the age of 16 and 24 has risen from 11.4% in 2004 to 15.7% in 2019. Even prior to the coronavirus pandemic this trend has been impacting young people across the entire country. Other age categories have seen less of a shift towards increased job insecurity.
               </h4>
             </span>
           </div>
@@ -159,11 +347,14 @@
           <div class="row">
             <span class="head">
               <h3>
-                Outline the rest of the story
+                Story outline
               </h3>
-              <h4>
-                And describe how I would put it together in collaboration with others at the ONS.
-              </h4>
+              <ol>
+                <li>Job insecurity: a young person's problem</li>
+                <li>Mental wellbeing and job insecurity</li>
+                <li>Current outlook and future prospects</li>
+                <li>A regional breakdown of employment status</li>
+              </ol>
             </span>
           </div>
         </div>
